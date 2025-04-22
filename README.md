@@ -37,3 +37,21 @@ futureValue =3416.288917
 futureRealValue =1819.946051
 
 ```
+
+--
+### 02-01-go-calc-ebt
+- Given revenue, expense, taxRate, compute EBT (earnings before tax), profit, ratio(EBT/profit)
+- Exemplifies os.Args, function definition, multiline strings (with backticks), strconv.parseFloat, and error handling.
+
+```bash
+cd 02-01-go-calc-ebt/
+go run . 1100 100 10    
+
+Output:
+revenue  =   1100.00
+expenses =    100.00
+taxRate  =     10.00
+ebt      =   1000.00
+profit   =    900.00
+ratio    =      1.11
+```
