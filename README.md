@@ -55,3 +55,25 @@ ebt      =   1000.00
 profit   =    900.00
 ratio    =      1.11
 ```
+
+--
+### 02-02-go-profit-calc
+- Another profit and EBT calculator.
+- This program employs a reusable function to prompt for and to collect user input.
+- Exemplifies custom exception handling.
+
+```bash
+cd 02-02-go-profit-calc
+go run .
+Enter Revenue:1100
+Enter Expenses:100
+Enter taxRate:10
+
+
+revenue  =   1100.00
+expenses =    100.00
+taxRate  =     10.00
+ebt      =   1000.00
+profit   =    900.00
+ratio    =      1.11
+```
