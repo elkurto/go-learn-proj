@@ -77,3 +77,13 @@ ebt      =   1000.00
 profit   =    900.00
 ratio    =      1.11
 ```
+
+-- 
+### 02-03-go-bank-sim
+- A simple ATM simulator in golang
+- Exemplifies, switch, conditionals, error handling, for (control loop).
+
+```bash
+cd 02-03-go-bank-sim
+go run .
+```
