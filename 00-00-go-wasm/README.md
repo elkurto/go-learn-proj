@@ -1,5 +1,7 @@
 # go + webassembly basic example
 
+#### derived from https://go.dev/wiki/WebAssembly#javascript-goosjs-port
+
 ```bash
 - prerequistie: go compiler (1.24.2) installed locally in dir, ${GOROOT}
 - mkdir 00-00-go-wasm
