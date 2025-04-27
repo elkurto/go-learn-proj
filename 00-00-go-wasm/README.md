@@ -3,6 +3,7 @@
 #### References:
 - derived from https://go.dev/wiki/WebAssembly#javascript-goosjs-port
 - build a calc in go tutorial : https://youtu.be/4kBvvk2Bzis?si=CxT1GoSyITkSReUt&t=130
+- go wasm tut - https://tutorialedge.net/golang/go-webassembly-tutorial/
 
 ```bash
 - prerequistie: go compiler (1.24.2) installed locally in dir, ${GOROOT}
