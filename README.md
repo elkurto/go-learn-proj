@@ -87,3 +87,20 @@ ratio    =      1.11
 cd 02-03-go-bank-sim
 go run .
 ```
+
+-- 
+### ad_aa_go_pointer
+- exemplifies passing a parameter by reference
+- initializing pointer in go
+- in/out parameter passed by ref in go
+
+```python
+cd  ad_aa_go_pointer/
+go run main.go
+
+# output :
+after first call : color =blue
+after second call : color =gray
+
+
+```
