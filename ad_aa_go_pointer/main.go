@@ -53,7 +53,8 @@ Initial State:
 numVarAtLoc00   =%16d    // value in   loc00
 &numVarAtLoc00  =%16d    // address of loc00
 ptrToLoc00      =%16d    // address of loc00
-*ptrToLoc00     =%16d    // value in   loc00
-**ptrToPtrToLoc =%16d    // value in   loc00
-`, numVarAtLoc00, &numVarAtLoc00, ptrToLoc00, *ptrToLoc00, **prtToPtrToLoc00)
+prtToPtrToLoc00 =%16d    // address of ptrToLoc00
+*ptrToLoc00     =%16d    // value in   loc00  // example of following ptr to value
+**ptrToPtrToLoc =%16d    // value in   loc00  // example of following ptr to ptr to value
+`, numVarAtLoc00, &numVarAtLoc00, ptrToLoc00, prtToPtrToLoc00, *ptrToLoc00, **prtToPtrToLoc00)
 }
