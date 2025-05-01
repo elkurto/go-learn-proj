@@ -6,10 +6,15 @@ import (
 )
 
 func main() {
-	exercisePointer()
+	fmt.Println("/// Output: exercisePointerChangeColor() ///")
+	exercisePointerChangeColor()
+
+	fmt.Println("\n/// Output: exercisePointerToPointer() ///")
+	exercisePointerToPointer()
+
 }
 
-func exercisePointer() {
+func exercisePointerChangeColor() {
 	var color string = ""
 	var colorPtr = &color // assign address of color to colorPtr.
 	// colorPtr implicitly has type, *string.
@@ -36,4 +41,19 @@ var aryColor = [...]string{"red", "green", "blue", "purple", "indigo", "yellow",
 func changeColor(colorPtr *string) {
 	var newColorIndex = rand.Int() % len(aryColor)
 	*colorPtr = aryColor[newColorIndex]
+}
+
+func exercisePointerToPointer() {
+	var numVarAtLoc00 = 100
+	var ptrToLoc00 = &numVarAtLoc00
+	var prtToPtrToLoc00 = &ptrToLoc00
+
+	fmt.Printf(`
+Initial State:
+numVarAtLoc00   =%d   // value in   loc00
+&numVarAtLoc00  =%d   // address of loc00
+ptrToLoc00      =%d   // address of loc00
+*ptrToLoc00     =%d   // value in   loc00
+**ptrToPtrToLoc =%d   // value in   loc00
+`, numVarAtLoc00, &numVarAtLoc00, ptrToLoc00, *ptrToLoc00, **prtToPtrToLoc00)
 }
