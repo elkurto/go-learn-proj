@@ -50,10 +50,10 @@ func exercisePointerToPointer() {
 
 	fmt.Printf(`
 Initial State:
-numVarAtLoc00   =%d   // value in   loc00
-&numVarAtLoc00  =%d   // address of loc00
-ptrToLoc00      =%d   // address of loc00
-*ptrToLoc00     =%d   // value in   loc00
-**ptrToPtrToLoc =%d   // value in   loc00
+numVarAtLoc00   =%16d    // value in   loc00
+&numVarAtLoc00  =%16d    // address of loc00
+ptrToLoc00      =%16d    // address of loc00
+*ptrToLoc00     =%16d    // value in   loc00
+**ptrToPtrToLoc =%16d    // value in   loc00
 `, numVarAtLoc00, &numVarAtLoc00, ptrToLoc00, *ptrToLoc00, **prtToPtrToLoc00)
 }
