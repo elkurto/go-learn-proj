@@ -14,10 +14,17 @@ type Book struct {
   createdAt time.Time
 }
 
+// 2. define a method on the :struct:Book
+func (book Book) printDetails() {
+  fmt.Printf(
+    `Book: {id:%d, %s, %s }
+`, book.id, book.title, book.author)
+}
+
 func main() {
   fmt.Println("\nRunning ad_ab_go_struct/main.go:")
 
-  // 2. create a book instance (using a struct composite literal)
+  // 3. create a book instance (using a struct composite literal)
   var book00 = Book{
     id:        1,
     title:     "Pro Go",
@@ -26,12 +33,16 @@ func main() {
     createdAt: time.Now(),
   }
 
-  // 3 print book details
+  // 3. print book details via function
+  fmt.Println("printDetails(book00) // a proper func")
   printBookDetails(book00)
+
+  // 4. print book details via method of :struct:Book
+  fmt.Println("\nbook00.printDetails() // a struct method // note: encapsulation")
+  book00.printDetails()
 }
 
 func printBookDetails(book Book) {
-  fmt.Printf(`
-Book: {id:%d, %s, %s }
+  fmt.Printf(`Book: {id:%d, %s, %s }
 `, book.id, book.title, book.author)
 }
