@@ -104,3 +104,20 @@ after second call : color =gray
 
 
 ```
+
+### ad_ab_go_struct
+- exemplifies usage of struct, with methods (encapsulation)
+
+```bash
+cd ad_ab_go_struct/
+go run main.go
+
+// OUTPUT:
+Running ad_ab_go_struct/main.go:
+printDetails(book00) // a proper func
+Book: {id:1, Pro Go, Freeman }
+
+book00.printDetails() // a struct method // note: encapsulation
+Book: {id:1, Pro Go, Freeman }
+
+```

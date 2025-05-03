@@ -46,3 +46,18 @@ func printBookDetails(book Book) {
   fmt.Printf(`Book: {id:%d, %s, %s }
 `, book.id, book.title, book.author)
 }
+
+/**
+USAGE:
+cd ad_ab_go_struct/
+go run main.go
+
+// OUTPUT:
+Running ad_ab_go_struct/main.go:
+printDetails(book00) // a proper func
+Book: {id:1, Pro Go, Freeman }
+
+book00.printDetails() // a struct method // note: encapsulation
+Book: {id:1, Pro Go, Freeman }
+
+*/
