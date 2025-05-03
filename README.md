@@ -128,9 +128,14 @@ go run main.go
   Book: {id:1, Pro Go, Freeman }
   
   ex02: book00.printDetails() // a struct method // note: encapsulation
-  Book: {id:1, title:Pro Go, authorFreeman }
+  Book: {id:1, title:Pro Go, author:Freeman }
   
   ex03: book00.mutateTitle("Pro Go!!!!!") // a struct mutator-method 
   book00.printDetails() // print state after mutating :member:title
-  Book: {id:1, title:Pro Go!!!!!, authorFreeman }
+  Book: {id:1, title:Pro Go!!!!!, author:Freeman }
+  
+  ex04: var book01, err = newBook(2, "The Art Of WebAssembly", "Battagline", "00-123123-123123-99")
+    use a factoryFunction Book::newBook as an ersatz constructor
+  Book: {id:2, title:The Art Of WebAssembly, author:Battagline }
+
 ```
