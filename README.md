@@ -1,3 +1,13 @@
+# Examples of Go (golang) Features
+
+### Refs:
+1. Adam Freeman's github site for book "Pro Go"
+  - code - https://github.com/apress/pro-go
+  - book - https://link.springer.com/book/10.1007/978-1-4842-7355-5
+2. Go - The Complete Guide Course - Max Schwarzmueller
+  - code - https://github.com/mschwarzmueller/go-complete-guide-resources
+  - udemy course - https://www.udemy.com/course/go-the-complete-guide
+
 
 ### 00-go-fmt
 - A simple go program that uses fmt.Printf(..), fn call , and for loop. 
@@ -106,18 +116,21 @@ after second call : color =gray
 ```
 
 ### ad_ab_go_struct
-- exemplifies usage of struct, with methods (encapsulation)
+- exemplifies usage of struct, with methods (encapsulation), passing struct by ref
 
 ```bash
 cd ad_ab_go_struct/
 go run main.go
 
-// OUTPUT:
-Running ad_ab_go_struct/main.go:
-printDetails(book00) // a proper func
-Book: {id:1, Pro Go, Freeman }
-
-book00.printDetails() // a struct method // note: encapsulation
-Book: {id:1, Pro Go, Freeman }
-
+  // OUTPUT:
+  Running ad_ab_go_struct/main.go:
+  ex01: printDetails(book00) // a proper func
+  Book: {id:1, Pro Go, Freeman }
+  
+  ex02: book00.printDetails() // a struct method // note: encapsulation
+  Book: {id:1, title:Pro Go, authorFreeman }
+  
+  ex03: book00.mutateTitle("Pro Go!!!!!") // a struct mutator-method 
+  book00.printDetails() // print state after mutating :member:title
+  Book: {id:1, title:Pro Go!!!!!, authorFreeman }
 ```
