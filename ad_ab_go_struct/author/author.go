@@ -8,22 +8,22 @@ import (
 type Author struct {
   Id        int
   Name      string
-  CreatedAt time.Time
+  CreatedAt int64
 }
 
 func NewAuthor(id int, name string) *Author {
   return &Author{
     Id:        id,
     Name:      name,
-    CreatedAt: time.Now(),
+    CreatedAt: time.Now().Unix(),
   }
 }
 
 func (author *Author) ToString() string {
-  return fmt.Sprintf("author.Author:{Id:%d,Name:%s,CreatedAt:%s",
+  return fmt.Sprintf("author.Author:{Id:%d,Name:%s,CreatedAt:%d}",
     author.Id, author.Name, author.CreatedAt)
 }
 
 func (author *Author) Println() {
-  fmt.Printf("%s\n", author.toString())
+  fmt.Printf("%s\n", author.ToString())
 }

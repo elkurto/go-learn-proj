@@ -1,6 +1,7 @@
 package main
 
 import (
+	"abc.com/ad_ab_go_struct/author"
 	"fmt"
 	"time"
 )
@@ -77,6 +78,12 @@ func main() {
 		book01.printDetails()
 	}
 
+	// 7. create, import, print an :struct:author
+	fmt.Println("\nex06: import, create, print :struct:author.Author\n",
+		"  var author05 = author.NewAuthor(5, \"Ian Fleming\")")
+	fmt.Println("  author.Println()")
+	var author05 = author.NewAuthor(5, "Ian Fleming")
+	author05.Println()
 }
 
 func printBookDetails(book *Book) {
