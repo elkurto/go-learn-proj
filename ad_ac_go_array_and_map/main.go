@@ -13,6 +13,9 @@ func main() {
   // ex 2 : use :fn:make and :fn:copy on an array of :struct:Person
   ex02UseMakeAndCopyOnArrayOfPerson()
 
+  // ex 3 : basic map construction
+  ex03MapBasicCreation()
+
 }
 
 func ex01CreateAndPrintAnArrayOfPerson() {
@@ -108,4 +111,35 @@ func ex02UseMakeAndCopyOnArrayOfPerson() {
      Person {id:7, Name:Yamamoto}
 
   */
+}
+
+func makeArrayPerson() []person.Person {
+  var aPerson = make([]person.Person, 5, 10)
+  aPerson[0] = person.Person{Id: 0, Name: "Smith", BirthDate: 134203470}
+  aPerson[1] = person.Person{Id: 1, Name: "Jones", BirthDate: 134203470}
+  aPerson[2] = person.Person{Id: 2, Name: "Salinas", BirthDate: 134203470}
+  aPerson[3] = person.Person{Id: 3, Name: "Xu", BirthDate: 134203470}
+  aPerson[4] = person.Person{Id: 4, Name: "Babar", BirthDate: 134203470}
+
+  // append to aPerson
+  aPerson = append(aPerson, person.Person{5, "ONeil", 1234456400})
+  aPerson = append(aPerson, person.Person{6, "Akuneli", 1234456400})
+  aPerson = append(aPerson, person.Person{7, "Yamamoto", 1234456400})
+
+  return aPerson
+}
+
+func ex03MapBasicCreation() {
+  // create map with make and for loop
+  aPerson := makeArrayPerson()
+  map_id_person := make(map[int64]person.Person, 10)
+
+  for i := 0; i <= len(aPerson); i++ {
+    var p = aPerson[i]
+    map_id_person[p.Id] = p
+
+  }
+
+  // create map with a "map_literal"
+	
 }
