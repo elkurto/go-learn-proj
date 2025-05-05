@@ -62,9 +62,9 @@ func ex02UseMakeAndCopyOnArrayOfPerson() {
   aPerson[4] = person.Person{Id: 4, Name: "Babar", BirthDate: 134203470}
 
   // append to aPerson
-  aPerson = append(aPerson, person.Person{5, "ONeil", 1234456400})
-  aPerson = append(aPerson, person.Person{6, "Akuneli", 1234456400})
-  aPerson = append(aPerson, person.Person{7, "Yamamoto", 1234456400})
+  aPerson = append(aPerson, person.Person{Id: 5, Name: "ONeil", BirthDate: 1234456400})
+  aPerson = append(aPerson, person.Person{Id: 6, Name: "Akuneli", BirthDate: 1234456400})
+  aPerson = append(aPerson, person.Person{Id: 7, Name: "Yamamoto", BirthDate: 1234456400})
 
   fmt.Println("\n  var aPerson = make([]person.Person, 5, 10) // then populate")
   for i := 0; i < len(aPerson); i++ {
@@ -122,9 +122,9 @@ func makeArrayPerson() []person.Person {
   aPerson[4] = person.Person{Id: 4, Name: "Babar", BirthDate: 134203470}
 
   // append to aPerson
-  aPerson = append(aPerson, person.Person{5, "ONeil", 1234456400})
-  aPerson = append(aPerson, person.Person{6, "Akuneli", 1234456400})
-  aPerson = append(aPerson, person.Person{7, "Yamamoto", 1234456400})
+  aPerson = append(aPerson, person.Person{Id: 5, Name: "ONeil", BirthDate: 1234456400})
+  aPerson = append(aPerson, person.Person{Id: 6, Name: "Akuneli", BirthDate: 1234456400})
+  aPerson = append(aPerson, person.Person{Id: 7, Name: "Yamamoto", BirthDate: 1234456400})
 
   return aPerson
 }
@@ -132,14 +132,24 @@ func makeArrayPerson() []person.Person {
 func ex03MapBasicCreation() {
   // create map with make and for loop
   aPerson := makeArrayPerson()
-  map_id_person := make(map[int64]person.Person, 10)
+  mapIdPerson := make(map[int64]person.Person, 10)
 
-  for i := 0; i <= len(aPerson); i++ {
+  for i := 0; i < len(aPerson); i++ {
     var p = aPerson[i]
-    map_id_person[p.Id] = p
+    mapIdPerson[p.Id] = p
 
   }
 
   // create map with a "map_literal"
-	
+  mapIdPerson01 := map[int64]person.Person{
+    11: *person.New(11, "Foo", 23452),
+    12: *person.New(12, "Bar", 23452),
+    13: *person.New(13, "Baz", 23452),
+    14: *person.New(14, "Qux", 23452),
+    15: *person.New(15, "Quux", 23452),
+  }
+  fmt.Println("  dump of mapIdPerson01 :: created with a \"map_literal\"")
+  for keyId, valuePerson := range mapIdPerson01 {
+    fmt.Println("    ", keyId, "=", valuePerson.ToString())
+  }
 }
