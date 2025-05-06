@@ -16,6 +16,8 @@ func main() {
   // ex 3 : basic map construction
   ex03MapBasicCreation()
 
+  // ex 4 : swap
+  ex04SwapAppliedToArrayPerson()
 }
 
 func ex01CreateAndPrintAnArrayOfPerson() {
@@ -152,4 +154,22 @@ func ex03MapBasicCreation() {
   for keyId, valuePerson := range mapIdPerson01 {
     fmt.Println("    ", keyId, "=", valuePerson.ToString())
   }
+}
+
+func ex04SwapAppliedToArrayPerson() {
+  aPerson := makeArrayPerson()
+  fmt.Println("\nex04 -\n", "- before swap")
+  for _, p := range aPerson {
+    fmt.Println("  ", p.ToString())
+  }
+
+  fmt.Println("\n- after swap")
+  for i := 0; i < len(aPerson)/2; i++ {
+    j := len(aPerson) - 1 - i
+    person.SwapArrayElement(aPerson, i, j)
+  }
+  for _, p := range aPerson {
+    fmt.Println("  ", p.ToString())
+  }
+
 }

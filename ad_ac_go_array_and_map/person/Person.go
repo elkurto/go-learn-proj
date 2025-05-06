@@ -19,3 +19,9 @@ func New(id int64, name string, birthDate int64) *Person {
 func (p *Person) ToString() string {
 	return fmt.Sprintf("Person {id:%d, Name:%s}", p.Id, p.Name)
 }
+
+func SwapArrayElement(aPerson []Person, i int, j int) {
+	temp := aPerson[i]
+	aPerson[i] = aPerson[j]
+	aPerson[j] = temp
+}
