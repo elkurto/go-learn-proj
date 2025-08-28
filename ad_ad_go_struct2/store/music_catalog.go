@@ -22,6 +22,7 @@ func NewMusician(id int, name string) *Musician {
 	return &Musician{id, name}
 }
 
+// an association
 type BandMusician struct {
 	Id       int
 	Band     Band
@@ -34,6 +35,7 @@ func NewBandMusician(id int, band Band, musician Musician) *BandMusician {
 	return &BandMusician{id, band, musician}
 }
 
+// Song is created by one or MusicianBand(s)
 type Song struct {
 	Id                  int
 	Name                string
