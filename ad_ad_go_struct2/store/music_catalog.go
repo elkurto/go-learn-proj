@@ -48,7 +48,7 @@ func NewSong(id int, name string, listBandMusician []BandMusician) *Song {
 	mapIdToBandMusician := make(map[int]BandMusician)
 
 	for _, bandMusician := range listBandMusician {
-		mapIdToBandMusician[bandMusician.id] = bandMusician
+		mapIdToBandMusician[bandMusician.Id] = bandMusician
 	}
 	song := Song{}
 	song.Id = id
