@@ -27,8 +27,8 @@ func main() {
 	fmt.Println("hello")
 	listPtrSong := createSampleData()
 
-	for _, songPtr := range listPtrSong {
-
+	for i, songPtr := range listPtrSong {
+		fmt.Printf("i =%s ::: songName =%s\n", i, *sontPtr.Name))
 	}
 
 }
