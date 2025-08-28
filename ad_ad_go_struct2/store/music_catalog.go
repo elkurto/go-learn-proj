@@ -5,6 +5,7 @@ type Band struct {
 	Name string
 }
 
+// create a new Music Band
 func NewBand(id int, name string) *Band {
 	return &Band{id, name}
 }
@@ -14,6 +15,7 @@ type Musician struct {
 	Name string
 }
 
+// create a new Musician
 func NewMusician(id int, name string) *Musician {
 	return &Musician{id, name}
 }
@@ -24,6 +26,8 @@ type BandMusician struct {
 	Musician Musician
 }
 
+// create a new BandMusician object -
+// that describes an association between Music,Band that created the Song
 func NewBandMusician(id int, band Band, musician Musician) *BandMusician {
 	return &BandMusician{id, band, musician}
 }
@@ -35,6 +39,7 @@ type Song struct {
 	ListBandMusician    []BandMusician
 }
 
+// create a new Song object
 func NewSong(id int, name string, listBandMusician []BandMusician) *Song {
 	mapIdToBandMusician := make(map[int]BandMusician)
 
