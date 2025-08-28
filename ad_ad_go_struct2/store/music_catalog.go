@@ -1,5 +1,6 @@
 package music_catalog
 
+// Band represents a collection of musicians
 type Band struct {
 	Id   int
 	Name string
@@ -10,6 +11,7 @@ func NewBand(id int, name string) *Band {
 	return &Band{id, name}
 }
 
+// Musicians create songs and collect to form bands
 type Musician struct {
 	Id   int
 	Name string
