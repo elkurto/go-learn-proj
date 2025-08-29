@@ -64,3 +64,21 @@ func NewSong(id int, name string, listBandMusician []BandMusician) *Song {
 func (s Song) String() string {
 	return fmt.Sprintf("Song(%d,%s)", s.Id, s.Name)
 }
+
+func createSampleData02() []*Song {
+	m1 := NewMusician(11, "Solveig")
+	m2 := NewMusician(12, "Dragonette")
+
+	b3 := NewBand(13, "DJ Solveig")
+	b4 := NewBand(14, "Dragonette")
+
+	mb31 := NewBandMusician(15, *b3, *m1)
+	mb42 := NewBandMusician(16, *b4, *m2)
+
+	var listPtrSong = []*Song{
+		NewSong(1, "Big in Japan", []BandMusician{*mb31}),
+		NewSong(2, "Hello", []BandMusician{*mb42}),
+	}
+
+	return listPtrSong
+}
