@@ -39,3 +39,23 @@ func main() {
 		fmt.Printf("i =%d ::: songName =%s\n", i, songPtr.String())
 	}
 }
+
+/*
+ Sample Run:
+ cd ad_ad_go_struct2/
+ go run .
+
+ Output:
+	hello
+	i =0 ::: songName =Song(1,Master Of Disaster)
+	i =0 ::: songName =Song(1,Master Of Disaster)
+	i =1 ::: songName =Song(2,Live1)
+	i =1 ::: songName =Song(2,Live1)
+
+	music_catalog.CreateSampleData02() :: a factory fn
+	i =0 ::: songName =Song(1,Big in Japan)
+	i =0 ::: songName =Song(1,Big in Japan)
+	i =1 ::: songName =Song(2,Hello)
+	i =1 ::: songName =Song(2,Hello)
+
+*/
