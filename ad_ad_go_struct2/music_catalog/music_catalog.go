@@ -1,5 +1,7 @@
 package music_catalog
 
+import "fmt"
+
 // Band represents a collection of musicians
 type Band struct {
 	Id   int
@@ -57,4 +59,8 @@ func NewSong(id int, name string, listBandMusician []BandMusician) *Song {
 	song.MapIdToBandMusician = mapIdToBandMusician
 
 	return &song
+}
+
+func (s Song) String() string {
+	return fmt.Sprintf("Song(%d,%s)", s.Id, s.Name)
 }

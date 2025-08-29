@@ -28,7 +28,8 @@ func main() {
 	listPtrSong := createSampleData()
 
 	for i, songPtr := range listPtrSong {
-		fmt.Printf("i =%d ::: songName =%s\n", i, songPtr.Name)
+		fmt.Printf("i =%d ::: songName =%s\n", i, songPtr) // works the same as next line.
+		fmt.Printf("i =%d ::: songName =%s\n", i, songPtr.String())
 	}
 
 }
