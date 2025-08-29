@@ -32,4 +32,10 @@ func main() {
 		fmt.Printf("i =%d ::: songName =%s\n", i, songPtr.String())
 	}
 
+	fmt.Println("\nmusic_catalog.CreateSampleData02() :: a factory fn")
+	listPtrSong02 := music_catalog.CreateSampleData02()
+	for i, songPtr := range listPtrSong02 {
+		fmt.Printf("i =%d ::: songName =%s\n", i, songPtr) // works the same as next line.
+		fmt.Printf("i =%d ::: songName =%s\n", i, songPtr.String())
+	}
 }

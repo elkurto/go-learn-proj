@@ -61,11 +61,13 @@ func NewSong(id int, name string, listBandMusician []BandMusician) *Song {
 	return &song
 }
 
+// convert Song to string
 func (s Song) String() string {
 	return fmt.Sprintf("Song(%d,%s)", s.Id, s.Name)
 }
 
-func createSampleData02() []*Song {
+// factory to create []*Song
+func CreateSampleData02() []*Song {
 	m1 := NewMusician(11, "Solveig")
 	m2 := NewMusician(12, "Dragonette")
 
